@@ -2,156 +2,572 @@
 <html lang="pt-BR">
 <head>
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TQJJS8J8');</script>
-<!-- End Google Tag Manager -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Diagnóstico Mulher de Valor">
-<title>Diagnóstico Mulher de Valor</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TQJJS8J8');</script>
+  <!-- End Google Tag Manager -->
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Diagnóstico Mulher de Valor">
+  <title>Diagnóstico Mulher de Valor</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <style type="text/css">
+    /* Variáveis e Design System Sofisticado */
+    :root {
+      --bg-light: #fcfbfa;
+      --text-dark: #201a16;
+      --text-muted: #61554d;
+      --accent-gold: #bfa16f;
+      --accent-gold-hover: #a68553;
+      --accent-green: #3d4f41;
+      --accent-green-light: #eef2ef;
+      --white: #ffffff;
+      --border-light: #eae3da;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth; /* Garante a rolagem suave pela página */
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Estilização Geral de Seções */
+    .section {
+      padding: 80px 0;
+    }
+    .section.alt {
+      background-color: #f5eee5;
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h1 { font-size: 38px; line-height: 1.2; }
+    h2 { font-size: 28px; }
+
+    /* Componente de Botão de CTA Fluido */
+    .btn-container {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-hover) 100%);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 18px 36px;
+      border-radius: 50px;
+      box-shadow: 0 10px 20px rgba(191, 161, 111, 0.2);
+      transition: all 0.3s ease;
+      text-align: center;
+      max-width: 100%;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 25px rgba(191, 161, 111, 0.35);
+    }
+
+    /* Hero e VSL */
+    .hero {
+      padding: 60px 0;
+      text-align: center;
+      background: radial-gradient(circle at top, #f4eee5 0%, var(--bg-light) 70%);
+    }
+    .hero h1 {
+      font-size: 36px;
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+    }
+    .sub {
+      font-size: 16px;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+    }
+    .video-wrap {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      background-color: #110e0c;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(32, 26, 22, 0.08);
+      max-width: 800px;
+      margin: 0 auto 30px auto;
+    }
+    .video-wrap iframe {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      border: none;
+    }
+
+    /* Box de Destaque do Método (Mudança 1) */
+    .method-highlight-box {
+      background-color: var(--white);
+      border-left: 5px solid var(--accent-gold);
+      padding: 25px;
+      border-radius: 0 16px 16px 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+      max-width: 800px;
+      margin: 20px auto 30px auto;
+      text-align: center;
+    }
+    .method-highlight-box p {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-dark);
+      line-height: 1.5;
+    }
+
+    /* Grid dos Cards de Sintomas / Etapas */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .card {
+      background: var(--white);
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid var(--border-light);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.01);
+    }
+
+    /* Depoimentos */
+    .carousel {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      padding-bottom: 15px;
+      scroll-snap-type: x mandatory;
+    }
+    .carousel img {
+      max-width: 320px;
+      border-radius: 12px;
+      scroll-snap-align: start;
+    }
+
+    /* Para quem é / Não é */
+    .container.two {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+    ul { list-style: none; margin-top: 15px; }
+    ul li {
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 12px;
+    }
+    ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent-gold);
+      font-weight: bold;
+    }
+    .container.two div:last-child ul li::before {
+      content: "✕";
+      color: #b05c5c;
+    }
+
+    /* Pilares */
+    .pillars {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--accent-gold-hover);
+      margin-bottom: 15px;
+    }
+
+    /* Sobre a Paty */
+    .container.about {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      align-items: center;
+    }
+    .container.about img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    /* Seção de Ancoragem Estruturada */
+    .anchoring-box {
+      background-color: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: 20px;
+      padding: 40px 30px;
+      margin-top: 30px;
+    }
+    .anchoring-list {
+      margin-bottom: 25px;
+    }
+    .anchoring-item {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed var(--border-light);
+      padding: 12px 0;
+      font-size: 15px;
+    }
+    .anchoring-item span:last-child {
+      font-weight: 700;
+      color: var(--accent-green);
+    }
+    .total-box {
+      background-color: #fdfbf7;
+      border: 1px solid var(--accent-gold);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .total-value { font-size: 22px; font-weight: 700; color: #b05c5c; text-decoration: line-through; }
+    .discount-value { font-size: 18px; font-weight: 600; color: var(--text-dark); margin-top: 5px; }
+
+    /* Caixa de Oferta Final */
+    .offer {
+      background: var(--white);
+      padding: 45px 35px;
+      border-radius: 24px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+      text-align: center;
+      max-width: 500px;
+      margin: 0 auto;
+      border: 1px solid var(--border-light);
+    }
+    .offer p.old { text-decoration: line-through; color: var(--text-muted); font-size: 16px; }
+    .offer p.price { font-size: 42px; font-weight: 700; color: #3d543f; margin: 10px 0 20px 0; }
+
+    /* FAQ Interativo (Accordion Estilizado - Mudança 5) */
+    .faq-item {
+      background: var(--white);
+      margin-bottom: 15px;
+      border-radius: 12px;
+      border: 1px solid var(--border-light);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 22px;
+      font-size: 17px;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--text-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.2s ease;
+    }
+    .faq-q:hover {
+      background-color: #faf7f2;
+    }
+    .faq-q::after {
+      content: '+';
+      font-size: 22px;
+      color: var(--accent-gold);
+      font-weight: 400;
+      transition: transform 0.3s ease;
+    }
+    .faq-item.active .faq-q::after {
+      transform: rotate(45deg);
+    }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 22px;
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.6;
+      transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    }
+    .faq-item.active .faq-a {
+      max-height: 500px;
+      padding: 0 22px 22px 22px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 40px 24px;
+      font-size: 13px;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-light);
+    }
+  </style>
 </head>
 <body>
 
-<section class="hero">
-<div class="container">
-<h1>Entenda o que você pode estar perdendo por se anular e como você pode se posicionar com segurança.</h1>
-<p class="sub">Assista o vídeo até o final e se liberte.</p>
-<div class="video-wrap">
-<iframe src="https://www.youtube.com/embed/ztSxnxD_6Lo" allowfullscreen></iframe>
-  
-<div class="container">
-<h1>Um Método 10x mais rápido que terapias convencionais que vai te ajudar a desbloquear sua vida de uma vez por todas.</h1>
+  <section class="hero">
+    <div class="container">
+      <h1>Entenda o que você pode estar perdendo por se anular e como você pode se posicionar com segurança.</h1>
+      <p class="sub">Assista o vídeo até o final e se liberte.</p>
+      
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/ztSxnxD_6Lo" allowfullscreen></iframe>
+      </div>
 
-</div>
-</div>
-<a href="#oferta" class="btn">QUERO PARAR DE SE ANULAR</a>
-</div>
-  
-</section>
-<section class="section">
-<div class="container">
-  
-<h2>Talvez você esteja se anulando se...</h2>
-<div class="grid">
-<div class="card">Tem dificuldade de dizer não.</div>
-<div class="card">Evita conflitos para agradar.</div>
-<div class="card">Coloca suas necessidades por último.</div>
-<div class="card">Sente culpa ao se priorizar.</div>
-<div class="card">Vive para atender os outros.</div>
-<div class="card">Não sabe mais o que gosta.</div>
-</div>
-</div>
-</section>
+      <!-- Mudança 1: Nova Chamada Estratégica inserida antes do primeiro botão -->
+      <div class="method-highlight-box">
+        <p>(Um Método 10x mais rápido que terapias convencionais que vai te ajudar a desbloquear sua vida de uma vez por todas.)</p>
+      </div>
 
-<section class="section alt">
-<div class="container">
-<h2>Depoimentos</h2>
-<div class="carousel">
-<img src="img/depoimento-01.jpg">
-<img src="img/depoimento-02.jpg">
-<img src="img/depoimento-03.jpg">
+      <!-- Mudança 2 & 3: Botão apontando diretamente para o início da ancoragem (#ancoragem) -->
+      <div class="btn-container">
+        <a href="#ancoragem" class="btn">QUERO PARAR DE ME ANULAR</a>
+      </div>
+    </div>
+  </section>
 
-</div>
-</div>
-</section>
+  <section class="section">
+    <div class="container">
+      <h2>Talvez você esteja se anulando se...</h2>
+      <div class="grid">
+        <div class="card">Tem dificuldade de dizer não.</div>
+        <div class="card">Evita conflitos para agradar.</div>
+        <div class="card">Coloca suas necessidades por último.</div>
+        <div class="card">Sente culpa ao se priorizar.</div>
+        <div class="card">Vive para atender os outros.</div>
+        <div class="card">Não sabe mais o que gosta.</div>
+      </div>
+      <!-- Mudança 2 & 3: Botão da seção redirecionando para a ancoragem -->
+      <div class="btn-container">
+        <a href="#ancoragem" class="btn">Quero Mudar Essa Realidade</a>
+      </div>
+    </div>
+  </section>
 
-<section class="section">
-<div class="container two">
-<div>
-<h2>Para Quem É</h2>
-<ul>
-<li>Mulheres que se colocam por último.</li>
-<li>Quem tem dificuldade em dizer não.</li>
-<li>Quem quer se posicionar com segurança.</li>
-<li>Quem sente que perdeu sua identidade.</li>
-</ul>
-</div>
-<div>
-<h2>Para Quem Não É</h2>
-<ul>
-<li>Quem procura fórmula mágica.</li>
-<li>Quem não deseja mudar.</li>
-<li>Quem prefere culpar os outros.</li>
-<li>Quem não quer olhar para si.</li>
-</ul>
-</div>
-</div>
-</section>
+  <section class="section alt">
+    <div class="container">
+      <h2>Depoimentos</h2>
+      <div class="carousel">
+        <img src="img/depoimento-01.jpg" alt="Depoimento 1">
+        <img src="img/depoimento-02.jpg" alt="Depoimento 2">
+        <img src="img/depoimento-03.jpg" alt="Depoimento 3">
+      </div>
+      <!-- Mudança 2 & 3 -->
+      <div class="btn-container">
+        <a href="#ancoragem" class="btn">Quero Ter Esses Resultados</a>
+      </div>
+    </div>
+  </section>
 
-<section class="section alt">
-<div class="container">
-<h2>O Que É o Diagnóstico Mulher de Valor?</h2>
-<p>Um raio-x emocional para identificar padrões de autoanulação, entender o preço que você está pagando e descobrir como voltar a se posicionar com segurança.</p>
-</div>
-</section>
+  <section class="section">
+    <div class="container two">
+      <div>
+        <h2>Para Quem É</h2>
+        <ul>
+          <li>Mulheres que se colocam por último.</li>
+          <li>Quem tem dificuldade em dizer não.</li>
+          <li>Quem quer se posicionar com segurança.</li>
+          <li>Quem sente que perdeu sua identidade.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Para Quem Não É</h2>
+        <ul>
+          <li>Quem procura fórmula mágica.</li>
+          <li>Quem não deseja mudar.</li>
+          <li>Quem prefere culpar os outros.</li>
+          <li>Quem não quer olhar para si.</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Mudança 2 & 3 -->
+    <div class="btn-container" style="margin-top: 40px;">
+      <a href="#ancoragem" class="btn">Esse Diagnóstico É Para Mim</a>
+    </div>
+  </section>
 
-<section class="section">
-<div class="container">
-<h2>As 6 Etapas</h2>
-<div class="grid">
-<div class="card"><b>1. Consciência</b><br>Você se afastou de si mesma?</div>
-<div class="card"><b>2. Autoanulação</b><br>Padrões normalizados.</div>
-<div class="card"><b>3. O Preço</b><br>As perdas invisíveis.</div>
-<div class="card"><b>4. A Raiz</b><br>Origem emocional.</div>
-<div class="card"><b>5. O Futuro</b><br>O que acontece se nada mudar.</div>
-<div class="card"><b>6. Devolutiva</b><br>Clareza e direção.</div>
-</div>
-</div>
-</section>
+  <section class="section alt">
+    <div class="container">
+      <h2>O Que É o Diagnóstico Mulher de Valor?</h2>
+      <p style="text-align: center; max-width: 750px; margin: 0 auto; font-size: 17px; color: var(--text-muted);">
+        Um raio-x emocional para identificar padrões de autoanulação, entender o preço que você está pagando e descobrir como voltar a se posicionar com segurança.
+      </p>
+      <!-- Mudança 2 & 3 -->
+      <div class="btn-container">
+        <a href="#ancoragem" class="btn">Quero Meu Raio-X Emocional</a>
+      </div>
+    </div>
+  </section>
 
-<section class="section alt">
-<div class="container center">
-<h2>Método Mulher de Valor</h2>
-<p class="pillars">Clareza → Decisão → Posicionamento → Reconstrução</p>
-<p>Voltar a existir dentro da própria vida ✨</p>
-</div>
-</section>
+  <section class="section">
+    <div class="container">
+      <h2>As 6 Etapas</h2>
+      <div class="grid">
+        <div class="card"><b>1. Consciência</b><br>Você se afastou de si mesma?</div>
+        <div class="card"><b>2. Autoanulação</b><br>Padrões normalizados.</div>
+        <div class="card"><b>3. O Preço</b><br>As perdas invisíveis.</div>
+        <div class="card"><b>4. A Raiz</b><br>Origem emocional.</div>
+        <div class="card"><b>5. O Futuro</b><br>O que acontece se nada mudar.</div>
+        <div class="card"><b>6. Devolutiva</b><br>Clareza e direção.</div>
+      </div>
+      <!-- Mudança 2 & 3 -->
+      <div class="btn-container">
+        <a href="#ancoragem" class="btn">Quero Passar Por Essas Etapas</a>
+      </div>
+    </div>
+  </section>
 
-<section class="section">
-<div class="container about">
-<img src="img/pati-06.jpg" alt="Patricia Pasquali">
-<div>
-<h2>Muito prazer, Patrícia Pasquali</h2>
-<p>Há mais de 15 anos ajudando mulheres a reconhecerem seus padrões, recuperarem sua identidade e aprenderem a se posicionar com segurança.</p>
-</div>
-</div>
-</section>
+  <section class="section alt">
+    <div class="container style-center" style="text-align: center;">
+      <h2>Método Mulher de Valor</h2>
+      <p class="pillars">Clareza → Decisão → Posicionamento → Reconstrução</p>
+      <p style="font-size: 18px; font-weight: 600;">Voltar a existir dentro da própria vida ✨</p>
+      <!-- Mudança 2 & 3 -->
+      <div class="btn-container">
+        <a href="#ancoragem" class="btn">Quero Voltar a Existir</a>
+      </div>
+    </div>
+  </section>
 
-<section id="oferta" class="section alt">
-<div class="container">
-<div class="offer">
-<h2>Sua clareza começa aqui</h2>
-<p>Diagnóstico Mulher de Valor</p>
-<p class="old">De R$147,00</p>
-<p class="price">Por apenas R$97,90</p>
-<a href="https://pay.kiwify.com.br/3np0VBK" target="_blank" class="btn">SIM, QUERO AGENDAR MINHA SESSÃO</a>
-</div>
-</div>
-</section>
+  <section class="section">
+    <div class="container about">
+      <img src="img/pati-06.jpg" alt="Patricia Pasquali">
+      <div>
+        <h2>Muito prazer, Patrícia Pasquali</h2>
+        <p style="color: var(--text-muted); margin-bottom: 15px;">Há mais de 15 anos ajudando mulheres a reconhecerem seus padrões, recuperarem sua identidade e aprenderem a se posicionar com segurança.</p>
+      </div>
+    </div>
+  </section>
 
-<section class="section">
-<div class="container">
-<h2>Perguntas Frequentes</h2>
-<div class="faq-item"><button class="faq-q">É terapia?</button><div class="faq-a">Não. É uma sessão de diagnóstico e direcionamento.</div></div>
-<div class="faq-item"><button class="faq-q">É individual?</button><div class="faq-a">Sim.</div></div>
-<div class="faq-item"><button class="faq-q">Vou sair com clareza?</button><div class="faq-a">Esse é o objetivo da sessão.</div></div>
-</div>
-</section>
+  <!-- Mudança 3 & 4: Adicionado id="ancoragem" aqui e corrigido PROTAGON (Wendell Carvalho) -->
+  <section id="ancoragem" class="section">
+    <div class="container">
+      <h2>O Conhecimento Por Trás do Seu Diagnóstico</h2>
+      <p style="text-align: center; color: var(--text-muted); max-width: 700px; margin: 0 auto 30px auto;">
+        Para construir uma metodologia prática, precisa e muito mais rápida que os caminhos tradicionais, foram anos de dedicação e um alto investimento em conhecimento:
+      </p>
+      
+      <div class="anchoring-box">
+        <div class="anchoring-list">
+          <div class="anchoring-item"><span>Faculdade de Psicologia</span> <span>+ 100k</span></div>
+          <div class="anchoring-item"><span>Pós-graduação de Gestão de Pessoas, Coach e Liderança</span> <span>8k</span></div>
+          <div class="anchoring-item"><span>Analista de Temperamentos</span> <span>+ 12k</span></div>
+          <div class="anchoring-item"><span>Método CIS (Paulo Vieira)</span> <span>+ 12k</span></div>
+          <div class="anchoring-item"><span>PROTAGON (Wendell Carvalho)</span> <span>12k</span></div>
+          <div class="anchoring-item"><span>Curso de Teste de Psicologia</span> <span>+ 5k</span></div>
+          <div class="anchoring-item"><span>Mentoria de Negócio Sistêmico</span> <span>+ 100k</span></div>
+          <div class="anchoring-item"><span>25 Anos de Experiência com Casais</span> <span>Valor Inestimável</span></div>
+        </div>
+        
+        <div class="total-box">
+          <p style="font-size: 14px; font-weight: 600; text-transform: uppercase; color: var(--text-muted);">Total de Investimento em Bagagem:</p>
+          <div class="total-value">R$ 249.000,00</div>
+          <div class="discount-value">Mesmo se entregássemos com 90% de desconto, custaria: R$ 24.900,00</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<script src="js/script.js"></script>
+  <section id="oferta" class="section alt">
+    <div class="container">
+      <div class="offer">
+        <h2>Sua clareza começa aqui</h2>
+        <p style="font-weight: 600; margin-bottom: 10px; color: var(--accent-gold-hover);">Diagnóstico Mulher de Valor</p>
+        <p class="old">De R$ 147,00</p>
+        <p class="price">Por apenas R$ 97,90</p>
+        <a href="https://pay.kiwify.com.br/3np0VBK" target="_blank" class="btn">SIM, QUERO AGENDAR MINHA SESSÃO</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mudança 5: FAQ Interativo Reestruturado por Cliques (Accordion) -->
+  <section class="section">
+    <div class="container">
+      <h2>Perguntas Frequentes</h2>
+      
+      <div class="faq-item">
+        <button class="faq-q">O que exatamente eu estou pagando para receber?</button>
+        <div class="faq-a">Você está adquirindo uma **Sessão Individual e Exclusiva de Diagnóstico e Direcionamento Emocional** diretamente com a Patrícia Pasquali. É um atendimento focado de aproximadamente 1 hora onde mapearemos detalhadamente onde você está se anulando e traçaremos o seu plano de posicionamento.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">É terapia convencional?</button>
+        <div class="faq-a">Não. É uma sessão de diagnóstico estruturado em 6 etapas claras. Ao invés de passar meses tentando descobrir o problema, aqui nós fazemos um raio-x direto no padrão que está bloqueando a sua vida atual.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Como eu faço para agendar a minha sessão após o pagamento?</button>
+        <div class="faq-a">Assim que o seu pagamento for aprovado pela plataforma, você receberá instantaneamente um e-mail e uma mensagem de WhatsApp com o link de acesso direto à nossa agenda para escolher o melhor dia e horário para o seu atendimento individual.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">As minhas informações e conversas estarão protegidas?</button>
+        <div class="faq-a">Sim, absolutamente. Todo o Diagnóstico é pautado sob sigilo profissional total e absoluto. É um espaço 100% seguro e acolhedor para você falar o que realmente sente, sem julgamentos.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">O diagnóstico serve para mim se eu já faço terapia?</button>
+        <div class="faq-a">Com certeza. Ele funciona perfeitamente como um acelerador e um complemento estratégico, trazendo clareza cirúrgica sobre o padrão de autoanulação que você pode levar para trabalhar com ainda mais profundidade depois.</div>
+      </div>
+    </div>
+  </section>
 
   <footer class="footer">
     <p>© 2026 Aion Consultoria Digital. Todos os direitos reservados.</p>
-</footer>
+  </footer>
+
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQJJS8J8"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQJJS8J8"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Script Lógico para Controlar a Abertura e Fechamento do FAQ por Clique -->
+  <script>
+    document.querySelectorAll('.faq-q').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        
+        // Fecha outros itens abertos para manter o visual limpo
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+          }
+        });
+        
+        // Alterna o estado (Abre ou fecha o atual clicado)
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+  <script src="js/script.js"></script>
 </body>
 </html>
