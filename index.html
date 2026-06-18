@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-TQJJS8J8');</script>
+  <!-- End Google Tag Manager -->
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Diagnóstico Mulher de Valor">
@@ -48,7 +51,7 @@
 
     .container {
       width: 100%;
-      max-width: 960px;
+      max-width: 1024px; /* Aumentado ligeiramente para acomodar melhor as fotos lado a lado */
       margin: 0 auto;
       padding: 0 24px;
     }
@@ -163,33 +166,51 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.01);
     }
 
-    /* Ajuste Avançado do Carrossel de Depoimentos */
-    .carousel {
-      display: flex;
+    /* NOVA DIAGRAMAÇÃO EM GRID PARA 5 IMAGENS (Sem Carrossel) */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 colunas no desktop */
       gap: 24px;
-      overflow-x: auto;
-      padding: 15px 10px 25px 10px;
-      scroll-snap-type: x mandatory;
-      justify-content: flex-start;
-      align-items: center;
-      -webkit-overflow-scrolling: touch;
+      margin-top: 30px;
+      justify-content: center;
     }
-    /* Centraliza os depoimentos em computadores se couberem todos na tela */
-    @media (min-width: 961px) {
-      .carousel {
-        justify-content: center;
-      }
-    }
-    .carousel img {
-      flex: 0 0 auto;
-      width: 280px;
+    
+    .testimonials-grid img {
+      width: 100%;
       height: auto;
-      max-height: 480px;
       object-fit: contain;
       border-radius: 14px;
-      scroll-snap-align: center;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
       background-color: var(--white);
+      transition: transform 0.3s ease;
+    }
+
+    .testimonials-grid img:hover {
+      transform: translateY(-3px);
+    }
+
+    /* Centralizar os 2 últimos itens na segunda linha no desktop */
+    .testimonials-grid img:nth-child(4) {
+      grid-column: 1 / span 1;
+      grid-column-start: 1;
+    }
+    
+    /* Ajustes finos de layout para tablet e computador */
+    @mixin layout-grid { }
+    @media (min-width: 769px) {
+      /* Faz com que as duas últimas imagens fiquem centralizadas abaixo das três primeiras */
+      .testimonials-grid img:nth-child(4) {
+        grid-column-start: 2;
+      }
+    }
+
+    /* Responsividade total para Celulares */
+    @media (max-width: 768px) {
+      .testimonials-grid {
+        grid-template-columns: 1fr; /* Vira uma coluna única bem legível */
+        max-width: 340px;
+        margin: 30px auto 0 auto;
+      }
     }
 
     /* Para quem é / Não é */
@@ -385,14 +406,17 @@
   <section class="section alt">
     <div class="container">
       <h2>Depoimentos</h2>
-      <div class="carousel">
+      
+      <!-- Nova Distribuição Lado a Lado Equilibrada -->
+      <div class="testimonials-grid">
         <img src="img/depoimento-01.jpg" alt="Depoimento 1">
         <img src="img/depoimento-02.jpg" alt="Depoimento 2">
         <img src="img/depoimento-03.jpg" alt="Depoimento 3">
         <img src="img/depoimento-04.jpg" alt="Depoimento 4">
         <img src="img/depoimento-05.jpg" alt="Depoimento 5">
       </div>
-      <div class="btn-container">
+
+      <div class="btn-container" style="margin-top: 40px;">
         <a href="#ancoragem" class="btn">Quero Ter Esses Resultados</a>
       </div>
     </div>
@@ -474,6 +498,7 @@
     </div>
   </section>
 
+  <!-- Seção de Ancoragem Estruturada -->
   <section id="ancoragem" class="section">
     <div class="container">
       <h2>O Conhecimento Por Trás do Seu Diagnóstico</h2>
@@ -514,6 +539,7 @@
     </div>
   </section>
 
+  <!-- FAQ Interativo Accordion -->
   <section class="section">
     <div class="container">
       <h2>Perguntas Frequentes</h2>
@@ -549,8 +575,12 @@
     <p>© 2026 Aion Consultoria Digital. Todos os direitos reservados.</p>
   </footer>
 
+  <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQJJS8J8"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Script Lógico do FAQ -->
   <script>
     document.querySelectorAll('.faq-q').forEach(button => {
       button.addEventListener('click', () => {
