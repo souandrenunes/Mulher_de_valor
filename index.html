@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-TQJJS8J8');</script>
-  <!-- End Google Tag Manager -->
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Diagnóstico Mulher de Valor">
@@ -38,7 +35,7 @@
     }
 
     html {
-      scroll-behavior: smooth; /* Garante a rolagem suave pela página */
+      scroll-behavior: smooth;
     }
 
     body {
@@ -133,7 +130,7 @@
       border: none;
     }
 
-    /* Box de Destaque do Método (Mudança 1) */
+    /* Box de Destaque do Método */
     .method-highlight-box {
       background-color: var(--white);
       border-left: 5px solid var(--accent-gold);
@@ -166,18 +163,33 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.01);
     }
 
-    /* Depoimentos */
+    /* Ajuste Avançado do Carrossel de Depoimentos */
     .carousel {
       display: flex;
-      gap: 20px;
+      gap: 24px;
       overflow-x: auto;
-      padding-bottom: 15px;
+      padding: 15px 10px 25px 10px;
       scroll-snap-type: x mandatory;
+      justify-content: flex-start;
+      align-items: center;
+      -webkit-overflow-scrolling: touch;
+    }
+    /* Centraliza os depoimentos em computadores se couberem todos na tela */
+    @media (min-width: 961px) {
+      .carousel {
+        justify-content: center;
+      }
     }
     .carousel img {
-      max-width: 320px;
-      border-radius: 12px;
-      scroll-snap-align: start;
+      flex: 0 0 auto;
+      width: 280px;
+      height: auto;
+      max-height: 480px;
+      object-fit: contain;
+      border-radius: 14px;
+      scroll-snap-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      background-color: var(--white);
     }
 
     /* Para quem é / Não é */
@@ -272,7 +284,7 @@
     .offer p.old { text-decoration: line-through; color: var(--text-muted); font-size: 16px; }
     .offer p.price { font-size: 42px; font-weight: 700; color: #3d543f; margin: 10px 0 20px 0; }
 
-    /* FAQ Interativo (Accordion Estilizado - Mudança 5) */
+    /* FAQ Interativo (Accordion Estilizado) */
     .faq-item {
       background: var(--white);
       margin-bottom: 15px;
@@ -343,12 +355,10 @@
         <iframe src="https://www.youtube.com/embed/ztSxnxD_6Lo" allowfullscreen></iframe>
       </div>
 
-      <!-- Mudança 1: Nova Chamada Estratégica inserida antes do primeiro botão -->
       <div class="method-highlight-box">
         <p>(Um Método 10x mais rápido que terapias convencionais que vai te ajudar a desbloquear sua vida de uma vez por todas.)</p>
       </div>
 
-      <!-- Mudança 2 & 3: Botão apontando diretamente para o início da ancoragem (#ancoragem) -->
       <div class="btn-container">
         <a href="#ancoragem" class="btn">QUERO PARAR DE ME ANULAR</a>
       </div>
@@ -366,7 +376,6 @@
         <div class="card">Vive para atender os outros.</div>
         <div class="card">Não sabe mais o que gosta.</div>
       </div>
-      <!-- Mudança 2 & 3: Botão da seção redirecionando para a ancoragem -->
       <div class="btn-container">
         <a href="#ancoragem" class="btn">Quero Mudar Essa Realidade</a>
       </div>
@@ -380,8 +389,11 @@
         <img src="img/depoimento-01.jpg" alt="Depoimento 1">
         <img src="img/depoimento-02.jpg" alt="Depoimento 2">
         <img src="img/depoimento-03.jpg" alt="Depoimento 3">
+        
+        <img src="img/depoimento-04.jpg" alt="Depoimento 4">
+        
+        <img src="img/depoimento-05.jpg" alt="Depoimento 5">
       </div>
-      <!-- Mudança 2 & 3 -->
       <div class="btn-container">
         <a href="#ancoragem" class="btn">Quero Ter Esses Resultados</a>
       </div>
@@ -409,7 +421,6 @@
         </ul>
       </div>
     </div>
-    <!-- Mudança 2 & 3 -->
     <div class="btn-container" style="margin-top: 40px;">
       <a href="#ancoragem" class="btn">Esse Diagnóstico É Para Mim</a>
     </div>
@@ -421,7 +432,6 @@
       <p style="text-align: center; max-width: 750px; margin: 0 auto; font-size: 17px; color: var(--text-muted);">
         Um raio-x emocional para identificar padrões de autoanulação, entender o preço que você está pagando e descobrir como voltar a se posicionar com segurança.
       </p>
-      <!-- Mudança 2 & 3 -->
       <div class="btn-container">
         <a href="#ancoragem" class="btn">Quero Meu Raio-X Emocional</a>
       </div>
@@ -439,7 +449,6 @@
         <div class="card"><b>5. O Futuro</b><br>O que acontece se nada mudar.</div>
         <div class="card"><b>6. Devolutiva</b><br>Clareza e direção.</div>
       </div>
-      <!-- Mudança 2 & 3 -->
       <div class="btn-container">
         <a href="#ancoragem" class="btn">Quero Passar Por Essas Etapas</a>
       </div>
@@ -451,7 +460,6 @@
       <h2>Método Mulher de Valor</h2>
       <p class="pillars">Clareza → Decisão → Posicionamento → Reconstrução</p>
       <p style="font-size: 18px; font-weight: 600;">Voltar a existir dentro da própria vida ✨</p>
-      <!-- Mudança 2 & 3 -->
       <div class="btn-container">
         <a href="#ancoragem" class="btn">Quero Voltar a Existir</a>
       </div>
@@ -468,7 +476,6 @@
     </div>
   </section>
 
-  <!-- Mudança 3 & 4: Adicionado id="ancoragem" aqui e corrigido PROTAGON (Wendell Carvalho) -->
   <section id="ancoragem" class="section">
     <div class="container">
       <h2>O Conhecimento Por Trás do Seu Diagnóstico</h2>
@@ -509,14 +516,13 @@
     </div>
   </section>
 
-  <!-- Mudança 5: FAQ Interativo Reestruturado por Cliques (Accordion) -->
   <section class="section">
     <div class="container">
       <h2>Perguntas Frequentes</h2>
       
       <div class="faq-item">
         <button class="faq-q">O que exatamente eu estou pagando para receber?</button>
-        <div class="faq-a">Você está adquirindo uma **Sessão Individual e Exclusiva de Diagnóstico e Direcionamento Emocional** diretamente com a Patrícia Pasquali. É um atendimento focado de aproximadamente 1 hora onde mapearemos detalhadamente onde você está se anulando e traçaremos o seu plano de posicionamento.</div>
+        <div class="faq-a">Você está adquirindo uma **Sessão Individual e Exclusiva de Diagnóstico e Direcionamento Emocional** diretamente com a Patrícia Pasquali. É um atendimento focado de aproximadamente 1 hora onde mapearemos detalhadamente onde você está se annumando e traçaremos o seu plano de posicionamento.</div>
       </div>
 
       <div class="faq-item">
@@ -545,25 +551,19 @@
     <p>© 2026 Aion Consultoria Digital. Todos os direitos reservados.</p>
   </footer>
 
-  <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQJJS8J8"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-  <!-- Script Lógico para Controlar a Abertura e Fechamento do FAQ por Clique -->
   <script>
     document.querySelectorAll('.faq-q').forEach(button => {
       button.addEventListener('click', () => {
         const item = button.parentElement;
         
-        // Fecha outros itens abertos para manter o visual limpo
         document.querySelectorAll('.faq-item').forEach(otherItem => {
           if (otherItem !== item) {
             otherItem.classList.remove('active');
           }
         });
         
-        // Alterna o estado (Abre ou fecha o atual clicado)
         item.classList.toggle('active');
       });
     });
